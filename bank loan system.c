@@ -12,6 +12,7 @@ int main() {
     // Declare variables for age and income
     int age;
     float income;
+    int qualify;
 
     // Prompt user for age
     printf("Enter your age: ");
@@ -23,11 +24,13 @@ int main() {
 
     // Check conditions:
     // Customer must be 21 years or older AND income must be at least 21000
-    if (age >= 21 && income >= 21000) {
-        printf("Congratulations! You qualify for a loan.\n");
-    } else {
-        printf("Unfortunately, we are unable to offer you a loan at this time.\n");
-    }
+    qualify = (age >= 21) * 
+     (income >=21000);
 
-    return 0;
+ // using qualifying value to choose message
+        printf("\n results : \n ");
+   printf("%s\n", qualify ? " congratulations! you qualify for a loan." :
+    
+    " unfortunately , we are unable to offer you aloan at this time.");
+  return 0;
 }
